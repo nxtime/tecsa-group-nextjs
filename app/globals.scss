@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-slate-900 text-zinc-100
+}
+
+input {
+  background-color: transparent;
+}
+
+.hr {
+  position: relative;
+  display: block;
+  @apply text-xs text-center py-2 flex items-center justify-center opacity-70;
+
+  &::after {
+    content: "";
+    height: 1px;
+
+    @apply absolute left-0 top-4 w-[calc(50%-1rem)] bg-slate-300;
+  }
+
+  &::before {
+    content: "";
+    height: 1px;
+
+    @apply absolute right-0 top-4 w-[calc(50%-1rem)] bg-slate-300;
+  }
+
+}
