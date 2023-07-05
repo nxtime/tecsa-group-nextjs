@@ -2,10 +2,8 @@ import { createServerComponentSupabaseClient } from "@supabase/auth-helpers-next
 import { cookies, headers } from "next/headers";
 import "server-only";
 
-import type { Database } from "@/types/supabase";
-
 export const createClient = () =>
-  createServerComponentSupabaseClient<Database>({
+  createServerComponentSupabaseClient({
     headers,
     cookies,
   });
